@@ -1,0 +1,66 @@
+:root {
+  /**Colores*/
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #FFC107;
+  --secundario: #0097A7;
+  --gris: #757575;
+
+  /**Fuentes*/
+  --fuente-principal: 3.8em;
+  --fuente-secundaria: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  /**1rem = 10px*/
+  font-weight: "krub", sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  font-size: var(--fuente-principal);
+}
+
+.titulo span {
+  font-size: var(--fuente-secundaria);
+}
+
+.contenedor {
+  max-width: 120rem;
+  /**1200px*/
+  margin: 0 auto;
+}
+
+.nav-bg {
+  background-color: var(--secundario);
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+}
+
+.navegacion-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: var(--fuente-secundaria);
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+}
+
+@media(min-width:768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
